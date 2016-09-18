@@ -1,0 +1,53 @@
+
+> TangentTrade@0.0.0 start D:\Gregory\Projects\TangentTrade
+> supervisor ./bin/www
+
+
+Running node-supervisor with
+  program './bin/www'
+  --watch '.'
+  --extensions 'node,js,/bin/www'
+  --exec 'node'
+
+Starting child process with 'node ./bin/www'
+Watching directory 'D:\Gregory\Projects\TangentTrade' for changes.
+Press rs for restarting the process.
+crashing child
+Starting child process with 'node ./bin/www'
+[0mGET / [36m304 [0m130.082 ms - -[0m
+[0mGET /css/w3.css [36m304 [0m7.679 ms - -[0m
+[0mGET /css/ngDialog.css [36m304 [0m7.897 ms - -[0m
+[0mGET /css/ngDialog-theme-default.css [36m304 [0m7.680 ms - -[0m
+[0mGET /css/ngDialog-theme-plain.css [36m304 [0m6.146 ms - -[0m
+[0mGET /images/logo-free.png [36m304 [0m72.708 ms - -[0m
+[0mGET /scripts/angular.min.js [36m304 [0m3.375 ms - -[0m
+[0mGET /scripts/ngDialog.js [36m304 [0m3.192 ms - -[0m
+[0mGET /scripts/angular-route.js [36m304 [0m1.523 ms - -[0m
+[0mGET /scripts/angular-cookies.js [36m304 [0m9.155 ms - -[0m
+[0mGET /scripts/angular-messages.min.js [36m304 [0m3.712 ms - -[0m
+[0mGET /scripts/angular-material.js [36m304 [0m4.948 ms - -[0m
+[0mGET /controllers/app.js [36m304 [0m21.372 ms - -[0m
+[0mGET /scripts/authServices.js [36m304 [0m10.698 ms - -[0m
+[0mGET /images/hlaser1.jpg [36m304 [0m5.637 ms - -[0m
+[0mGET /images/fiberlaser.jpg [36m304 [0m43.747 ms - -[0m
+[0mGET /images/robot.png [36m304 [0m8.343 ms - -[0m
+[0mGET /images/nozzle.jpg [36m304 [0m3.648 ms - -[0m
+[0mGET /views/main/maincontroller.js [36m304 [0m2.389 ms - -[0m
+[0mGET /views/login/LoginController.js [36m304 [0m2.961 ms - -[0m
+[0mGET /scripts/angular-password.js [36m304 [0m6.256 ms - -[0m
+[0mGET /favicon.ico [33m404 [0m1146.555 ms - 1775[0m
+{ name: 'Gregory Pillai',
+  Organization: 'ewe',
+  Designation: 'erer',
+  tonnagepermonth: '23',
+  CurrentProcess: '33wdfsdf',
+  BuyingTime: '323',
+  Budget: '333',
+  contactyn: 'male',
+  contactwhen: '2016-09-28T18:30:00.000Z',
+  email: 'gregory.pillai@gmail.com' }
+Executing (default): SELECT "emailid" FROM "Users" AS "Users" WHERE "Users"."emailid" = NULL LIMIT 1;
+Executing (default): INSERT INTO "Users" ("emailid","name") VALUES (NULL,'Gregory Pillai') RETURNING *;
+Received SIGINT, killing child process...
+Parent process exiting, terminating child...
+Terminate batch job (Y/N)? 

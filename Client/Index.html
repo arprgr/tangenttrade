@@ -1,0 +1,233 @@
+<html> 
+   <head>
+      <title>Tangent Trade</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/w3.css">
+      <link rel="stylesheet" href="css/ngDialog.css">
+      <link rel="stylesheet" href="css/ngDialog-theme-default.css">
+      <link rel="stylesheet" href="css/ngDialog-theme-plain.css">
+   </head>
+
+<style>
+.mySlides {display:none;}
+</style>    
+<body ng-app="tangenttrademain"> 
+         <header class="w3-container w3-dark-grey w3-padding-0">   
+            <div class="w3-quarter w3-container w3-padding-0">
+             <img src="images/logo-free.png" style="width:150px;height:63px">    
+            </div>    
+            
+             <div class="w3-half w3-container w3-center"> 
+                <h2>Welcome to Tangent Trade</h2>  
+                 <div ng-if="loggedInFlag=='true'">Your are logged in as: {{userName}}, {{userEmailId}} </div>
+                 <div ng-if="loggedInFlag==''"> You are currently not Logged in </div>
+             </div>   
+            
+             <div class="w3-quarter w3-container"  ng-controller="registration">
+                <div class="w3-btn-group w3-padding-16">
+                  <button class="w3-btn" ng-click="Login()" style="width:50%">Sign-In</button>
+                  <button class="w3-btn w3-teal" ng-click="clickToOpen()" style="width:50%">Sign-up</button>
+                 </div>    
+            </div>    
+            
+         </header>
+       <div class="w3-row w3-black">
+        <ul class="w3-navbar w3-black">
+                <li><a class="w3-hover-green w3-padding-16" href="javascript:void(0)">Home</a></li>
+                <li><a class="w3-hover-green w3-padding-16" href="javascript:void(0)">Sales</a></li>
+                <li><a class="w3-hover-green w3-padding-16" href="javascript:void(0)">Service</a></li>
+                <li><a class="w3-hover-green w3-padding-16" href="javascript:void(0)">Spare Parts</a></li>     
+                <li><a class="w3-hover-green w3-padding-16" href="javascript:void(0)">Logistics</a></li>
+                <li><a class="w3-hover-green w3-padding-16" href="javascript:void(0)">Finance</a></li>
+                
+                <li><a class="w3-hover-green w3-padding-16" href="javascript:void(0)">Contact Us</a></li>
+                 <li class="w3-navitem">
+                    <input type="text" class="w3-input w3-border-0 w3-padding-8" placeholder="Search.." size="46">
+                  </li>
+                
+                
+        </ul>      
+    
+     
+           
+        </div>
+         
+         
+         <div class="w3-row">
+            <div class="w3-col w3-padding-0 w3-container w3-border l2 w3-yellow">
+             <button class="w3-btn-block w3-center-align w3-dark-grey">Product Portfolio</button>
+               
+                  <div class="w3-accordion w3-center-align">
+                      <button class="w3-btn-block w3-center-align w3-light-green" onclick="myAccFunc('demoAcc1')">Cutting Machines </button> 
+                   
+                    <div id="demoAcc1" class="w3-accordion-content w3-white w3-card-4">
+                        <button class="w3-teal w3-center-align" style="width:100%">Laser Cutting</button>
+                        <button class="w3-teal w3-center-align" style="width:100%">Metal Cutting</button>
+                        <button class="w3-teal w3-center-align" style="width:100%">Wood Cutting</button>
+                        <button class="w3-teal w3-center-align" style="width:100%">Plastic Cutting</button>
+                    </div>
+                  </div>
+                  <div class="w3-accordion">
+                    <button class="w3-btn-block w3-center-align w3-light-green" onclick="myAccFunc('demoAcc2')">Grinding Machines </button>
+                    <div id="demoAcc2" class="w3-accordion-content w3-white w3-card-4">
+                        <button class="w3-teal w3-center-align" style="width:100%">Laser Cutting</button>
+                        <button class="w3-teal w3-center-align" style="width:100%">Metal Cutting</button>
+                        <button class="w3-teal w3-center-align" style="width:100%">Wood Cutting</button>
+                        <button class="w3-teal w3-center-align" style="width:100%">Plastic Cutting</button>
+                    </div>
+                  </div>
+                  <div class="w3-accordion">
+                      <button class="w3-btn-block w3-center-align w3-light-green" onclick="myAccFunc('demoAcc3')">Drilling Machines </button>
+                    <div id="demoAcc3" class="w3-accordion-content w3-white w3-card-4">
+                        <button class="w3-teal w3-center-align" style="width:100%">Laser Cutting</button>
+                        <button class="w3-teal w3-center-align" style="width:100%">Metal Cutting</button>
+                        <button class="w3-teal w3-center-align" style="width:100%">Wood Cutting</button>
+                        <button class="w3-teal w3-center-align" style="width:100%">Plastic Cutting</button>
+                    </div>
+                  </div> 
+                  <div class="w3-accordion">
+                      <button class="w3-btn-block w3-center-align w3-light-green" onclick="myAccFunc('demoAcc4')">Laser Machines </button>
+                    <div id="demoAcc4" class="w3-accordion-content w3-white w3-card-4">
+                      <button class="w3-teal w3-center-align" style="width:100%">Laser Cutting</button>
+                        <button class="w3-teal w3-center-align" style="width:100%">Metal Cutting</button>
+                        <button class="w3-teal w3-center-align" style="width:100%">Wood Cutting</button>
+                        <button class="w3-teal w3-center-align" style="width:100%">Plastic Cutting</button>
+                    </div>
+                  </div>       
+                
+                
+
+            </div>
+            <div class="w3-col w3-padding-0 w3-container l7">  
+               <div class="w3-padding-0" style="width:747px;height:400px">
+                    <img class="mySlides w3-padding-0" src="images/hlaser1.jpg" style="width:100%;height:500px">
+                    <img class="mySlides w3-padding-0" src="images/fiberlaser.jpg" style="width:100%;height:500px">
+                    <img class="mySlides w3-padding-0" src="images/robot.png" style="width:100%;height:500px">
+                    <img class="mySlides w3-padding-0" src="images/nozzle.jpg" style="width:100%;height:500px">
+                    
+              </div>
+            </div>
+            <div class="w3-col w3-padding-0 w3-container l3 w3-yellow">
+               <div class="w3-accordion w3-padding-0 w3-light-grey">
+                    <button onclick="myFunction('Demo1')" class="w3-btn-block w3-dark-grey w3-center-align">Enquiry - Buyer</button>
+                      <div id="Demo1" class="w3-accordion-content w3-container w3-show">
+        <form name="buyerEnqFrm" ng-submit="addBuyerEnq()" data-ng-controller="registration" class="w3-container">
+                                    <p>
+                <input class="w3-input" id="name" type="text" name="name" ng-model="buyerEnqFrmdData.name" required/>
+
+                <label class="w3-label w3-validate">Name</label></p>
+
+                <p>
+                <input class="w3-input" type="text" name="Organization" ng-model="buyerEnqFrmdData.Organization" placeholder="Your Organization" required>
+                <label class="w3-label w3-validate">Organisation</label></p>
+
+                <p>
+                <input class="w3-input" type="text" name="Designation" ng-model="buyerEnqFrmdData.Designation" required>
+                <label class="w3-label w3-validate">Designation</label></p>
+
+                <p>
+                <input class="w3-input" type="text" name="tonnagepermonth" ng-model="buyerEnqFrmdData.tonnagepermonth" required>
+                <label class="w3-label w3-validate">Tonnage of Cut per Month</label></p>
+
+                <p>
+                <input class="w3-input" type="text" name="CurrentProcess" ng-model="buyerEnqFrmdData.CurrentProcess" required>
+                <label class="w3-label w3-validate">Current Process</label></p>
+
+                <p>
+                <input class="w3-input" type="text" name="BuyingTime" ng-model="buyerEnqFrmdData.BuyingTime" required>
+                <label class="w3-label w3-validate">Buying Time (month)</label></p>
+
+                <p>
+                <input class="w3-input" type="text" name="Budget" ng-model="buyerEnqFrmdData.Budget" required>
+                <label class="w3-label w3-validate">Budget</label></p>
+
+                <p>Do you want our Engineers to Contact you</p>
+                    <input class="w3-radio" type="radio" name="contactyn" value="true" ng-model="buyerEnqFrmdData.contactyn" checked>
+                    <label class="w3-validate">Yes</label>
+
+                    <input class="w3-radio" type="radio" name="contactyn" ng-model="buyerEnqFrmdData.contactyn" value="false">
+                    <label class="w3-validate">No</label>
+
+                <p>
+                <input class="w3-input" type="date" min="2016-09-20" name="contactwhen" ng-model="buyerEnqFrmdData.contactwhen" required>
+                <label class="w3-label w3-validate">When</label></p>
+
+
+
+                <p>
+                <input class="w3-input" type="email" name="text" ng-model="buyerEnqFrmdData.email" required>
+                <label class="w3-label w3-validate">Email</label></p>
+
+                <p>
+                <button class="w3-btn w3-teal" type="submit" style="width:100%">Submit</button></p>
+
+                          </form>
+                      </div>
+                    <button onclick="myFunction('Demo2')" class="w3-btn-block w3-dark-grey w3-center-align">Enquiry - Seller</button>
+                      <div id="Demo2" class="w3-accordion-content w3-container">
+                        
+                      </div>
+                </div>
+            </div> 
+          </div> 
+        
+       
+    <script>
+
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                   x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}
+                x[myIndex-1].style.display = "block";
+                setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+        
+            function myFunction(id) {
+            var x = document.getElementById(id);
+                
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                    x.className = x.className.replace(" w3-show", "");
+            }
+          } 
+        
+
+
+function myAccFunc(Acc) {
+    var x = document.getElementById(Acc);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-green";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+}
+
+       
+</script>
+
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/ngDialog.js"></script>
+<script src="scripts/angular-route.js"></script>
+<script src="scripts/angular-cookies.js"></script>
+<script src="scripts/angular-messages.min.js"></script>
+<script src="scripts/angular-password.js"></script>
+<script src="scripts/angular-material.js"></script>
+
+<script src="controllers/app.js"></script>
+<script src="scripts/authServices.js"></script>
+<script src="views/main/maincontroller.js"></script> 
+<script src="views/login/LoginController.js"></script>   
+    
+</body>
+</html>

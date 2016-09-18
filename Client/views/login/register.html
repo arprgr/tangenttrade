@@ -1,0 +1,81 @@
+<html>
+<header>
+<link rel="stylesheet" href="../../css/w3.css">    
+    
+</header>
+    
+<body>
+    
+  <form name="registerForm" class="w3-container" data-ng-controller="registration">
+    <p>
+    
+    <input id="name" class="w3-input" type="text" name="name" ng-model="regFormData.name" ng-minlength="3" ng-maxlength="24" placeholder="First & Last Name" required>
+    
+    <label class="w3-label w3-validate">Full Name</label>
+    
+      <div ng-if="registerForm.name.$touched" ng-messages="registerForm.name.$error" style="color:maroon" role="alert">
+          <div ng-if="registerForm.name.$error.required" ng-message="required">Please enter your name</div>
+         <div ng-if="registerForm.name.$error.minlength" ng-message="minlength">Name is too short</div>
+         <div ng-if="registerForm.name.$error.maxlength" ng-message="maxlength">Name is too long</div>
+      </div>    
+    </p>
+        
+    <p>
+    <input id="organization" class="w3-input" type="text" name="organization" ng-model="regFormData.organization" ng-minlength="3">
+    <label class="w3-label w3-validate">Organization</label>
+  
+    </p>
+
+    <p>
+    <input class="w3-input" type="text" name="contactNo" required>
+    <label class="w3-label w3-validate">Contact No</label></p>
+
+    <p>
+    <input class="w3-input" type="email" name="custemail" ng-model="regFormData.custemail" placeholder="me@example.com" required>
+    <label class="w3-label w3-validate">Email</label>
+    <div  ng-if="registerForm.custemail.$error" ng-messages="registerForm.custemail.$error" style="color:red" role="alert">
+         <div ng-if="registerForm.custemail.$error.email" ng-message="pattern">Please enter a valid email address</div>
+    </div>
+    
+    </p>
+    <p>
+    <input class="w3-radio" type="radio" name="gender" ng-model="regFormData.type" value="Buyer" checked>
+    <label class="w3-validate">Buyer</label>
+
+    <input class="w3-radio" type="radio" name="gender" ng-model="regFormData.type" value="Seller">
+    <label class="w3-validate">Seller</label>
+    <div  ng-if="registerForm.type.$error" ng-messages="registerForm.custemail.$error" style="color:red" role="alert">
+         <div ng-if="registerForm.custemail.$error.required" ng-message="pattern">Please select a customer type</div>
+    </div>
+    
+    </p>
+    <p>
+    <input id="password" class="w3-input" type="password" name="password" ng-model="regFormData.password" ng-minlength="6" ng-maxlength="10" required>    
+    <label class="w3-label w3-validate">Password</label>
+    <div ng-if="registerForm.password.$touched" ng-messages="registerForm.password.$error" style="color:maroon" role="alert">
+        
+          <div ng-if="registerForm.password.$error.required" ng-message="required">Please enter your password</div>
+         <div ng-if="registerForm.password.$error.minlength" ng-message="minlength">Password is too short</div>
+         <div ng-if="registerForm.password.$error.maxlength" ng-message="maxlength">Password is too long</div>
+      </div>    
+      
+      </p> 
+      
+     <p>
+      <input id="confirmPassword" class="w3-input" type="password" name="confirmPassword" ng-model="regFormData.confirmPassword" match-password="password" required>    
+    <label class="w3-label w3-validate">Password</label>
+          
+      
+    </p>   
+      
+    <p>
+        
+    
+   <button class="w3-btn w3-teal" ng-disabled="registerForm.$invalid" ng-click="addUser()" style="width:100%">Sign-up</button> 
+
+  </form>
+    
+    
+</body>
+
+</html>

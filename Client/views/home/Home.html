@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caring Generations</title>
+
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <h1 class="logo">Caring Generations</h1>
+        <a  href="" ng-click="clickToOpen()" class="linkfont">Sign in | </a>
+        <a href="" ng-click="clickToOpenRegister()" class="linkfont">Register</a>
+    </header>
+    <div class="ContainerFields">
+    <form class="form" name="form">
+        <div class="homefields" >
+        <input id ="email" type="email" data-ng-model="formData.email"  placeholder="Your email address" class="emailField" required>
+        <button type="submit" ng-disabled="form.$invalid || dataLoading" ng-click="buttonClick()" class="getStartedButton">Get Started</button>
+       </div>
+    </form>
+   </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "tangenttrade",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
